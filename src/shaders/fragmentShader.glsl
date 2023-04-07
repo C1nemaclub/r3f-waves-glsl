@@ -3,6 +3,16 @@
 uniform vec3 uColor;
 uniform float uTime;
 
+varying vec3 vPosition;
+uniform vec3 uColorStart;
+uniform vec3 uColorEnd;
 void main(){
-    gl_FragColor = vec4(uColor, 1.0);
+
+
+    float dist = distance(vPosition.z, 0.5);
+
+
+    vec3 mixed2 = mix(uColorStart, uColorEnd, dist);
+
+    gl_FragColor = vec4(mixed2,1.0);
 }

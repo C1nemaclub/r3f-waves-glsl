@@ -7,5 +7,3 @@ export default defineConfig({
   base: '/r3f-waves-glsl/',
   plugins: [react(), glsl()],
 });
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
